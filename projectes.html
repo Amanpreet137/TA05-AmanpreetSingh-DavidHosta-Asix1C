@@ -1,0 +1,744 @@
+<!DOCTYPE html>
+<html lang="ca">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Projectes</title>
+
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="projectes.css" />
+</head>
+
+<body>
+  <div class="scroll-progress-wrap" aria-hidden="true">
+  <div id="scrollProgress" class="scroll-progress-bar"></div>
+</div>
+
+<header>
+  <div class="header-top">
+    <h1>El meu portfoli</h1>
+  </div>
+
+  <nav>
+    <ul>
+      <li><a href="index.html">Inici</a></li>
+      <li><a href="projectes.html" class="active">Projectes</a></li>
+      <li><a href="contacte.html">Contacte</a></li>
+      <li class="nav-tools">
+  <button id="themeToggle" class="theme-toggle" type="button" aria-pressed="false" title="Canviar tema">
+    ☀️
+  </button>
+</li>
+
+    </ul>
+  </nav>
+</header>
+
+<main class="main-content">
+  <!-- HERO / INTRO -->
+  <section class="projects-hero">
+    <div class="projects-hero__text">
+      <h2>Projectes <span>ASIX</span> (selecció)</h2>
+      <p>
+        Una selecció de projectes de sistemes, xarxes i seguretat. Pots filtrar per categoria
+        o buscar per tecnologies (Apache, VLAN, DNS, backups, etc.).
+      </p>
+
+      <div class="projects-kpis">
+        <div class="kpi">
+          <div class="kpi__num">20</div>
+          <div class="kpi__label">Projectes</div>
+        </div>
+        <div class="kpi">
+          <div class="kpi__num">3</div>
+          <div class="kpi__label">Àrees</div>
+        </div>
+        <div class="kpi">
+          <div class="kpi__num">Linux · Cisco · Web</div>
+          <div class="kpi__label">Stack principal</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="projects-hero__card">
+      <h3>Com utilitzar aquesta pàgina</h3>
+      <ul>
+        <li>Filtra per categoria (Sistemes / Xarxes / Seguretat)</li>
+        <li>Clica una targeta per veure detalls (acordeó)</li>
+        <li>Els “Destacats” tenen pàgina pròpia</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- TOOLBAR -->
+  <section class="projects-toolbar">
+    <div class="search-wrap">
+      <input id="projectSearch" type="search" placeholder="Cerca (ex: Apache, VLAN, DNS, backups...)" />
+      <span class="search-hint">Filtra al moment mentre escrius</span>
+    </div>
+
+    <div class="chips" aria-label="Filtres per categoria">
+      <button class="chip active" type="button" data-filter="all">Tots</button>
+      <button class="chip" type="button" data-filter="sistemes">Sistemes</button>
+      <button class="chip" type="button" data-filter="xarxes">Xarxes</button>
+      <button class="chip" type="button" data-filter="seguretat">Seguretat</button>
+    </div>
+  </section>
+
+  <!-- GRID -->
+  <section>
+    <div class="grid-projectes" id="projectsGrid">
+
+      <!-- 1 (Destacat) -->
+      <article class="project-card" data-tags="sistemes web apache ssl openssl virtualhosts backups duplicati linux" data-cat="sistemes">
+        <button class="project-header" type="button" aria-expanded="false">
+          <div class="project-head-left">
+            <span class="project-icon" aria-hidden="true">🖥️</span>
+            <div class="project-head-text">
+              <div class="project-title-row">
+                <span class="project-title">Servidor Web amb Apache + HTTPS</span>
+                <span class="badge badge--featured">Destacat</span>
+              </div>
+              <span class="project-subtitle">Apache2, VirtualHosts, SSL/TLS i backups</span>
+            </div>
+          </div>
+          <span class="project-toggle" aria-hidden="true">+</span>
+        </button>
+
+        <div class="project-info">
+          <p><strong>Resum:</strong> Servidor HTTP/HTTPS en Linux amb control d’accés i còpies automatitzades.</p>
+
+          <div class="meta-row">
+            <span class="pill">Linux</span>
+            <span class="pill">Apache2</span>
+            <span class="pill">SSL</span>
+            <span class="pill">Duplicati</span>
+          </div>
+
+          <ul class="bullets">
+            <li>VirtualHosts + logs separats per site</li>
+            <li>Redirecció HTTP → HTTPS i configuració TLS</li>
+            <li>Directori protegit amb autenticació bàsica</li>
+            <li>Backups programats i prova de restauració</li>
+          </ul>
+
+          <div class="actions">
+            <a class="btn-mini" href="projecte-linux-apache.html">Veure projecte</a>
+          </div>
+        </div>
+      </article>
+
+      <!-- 2 (Destacat) -->
+      <article class="project-card" data-tags="xarxes vlan trunking stp router-on-a-stick cisco inter-vlan" data-cat="xarxes">
+        <button class="project-header" type="button" aria-expanded="false">
+          <div class="project-head-left">
+            <span class="project-icon" aria-hidden="true">🌐</span>
+            <div class="project-head-text">
+              <div class="project-title-row">
+                <span class="project-title">Xarxa d’Oficina amb VLANs + ROAS</span>
+                <span class="badge badge--featured">Destacat</span>
+              </div>
+              <span class="project-subtitle">Segmentació, STP i inter-VLAN routing</span>
+            </div>
+          </div>
+          <span class="project-toggle" aria-hidden="true">+</span>
+        </button>
+
+        <div class="project-info">
+          <p><strong>Resum:</strong> Disseny de xarxa amb VLANs, trunk 802.1Q, STP i router-on-a-stick.</p>
+
+          <div class="meta-row">
+            <span class="pill">Cisco</span>
+            <span class="pill">VLAN</span>
+            <span class="pill">STP</span>
+            <span class="pill">Routing</span>
+          </div>
+
+          <ul class="bullets">
+            <li>Ports d’accés i troncals amb VLAN nativa</li>
+            <li>Elecció de root bridge i validació d’STP</li>
+            <li>Subinterfícies dot1q i gateways per VLAN</li>
+            <li>Proves de connectivitat inter-VLAN</li>
+          </ul>
+
+          <div class="actions">
+            <a class="btn-mini" href="projecte-xarxa-vlans.html">Veure projecte</a>
+          </div>
+        </div>
+      </article>
+
+      <!-- 3 -->
+      <article class="project-card" data-tags="xarxes dhcp cisco ios ip pools gateway dns" data-cat="xarxes">
+        <button class="project-header" type="button" aria-expanded="false">
+          <div class="project-head-left">
+            <span class="project-icon" aria-hidden="true">📡</span>
+            <div class="project-head-text">
+              <div class="project-title-row">
+                <span class="project-title">DHCP en Router Cisco</span>
+                <span class="badge">Xarxes</span>
+              </div>
+              <span class="project-subtitle">Pools, exclusions i opcions DHCP</span>
+            </div>
+          </div>
+          <span class="project-toggle" aria-hidden="true">+</span>
+        </button>
+        <div class="project-info">
+          <p><strong>Resum:</strong> Servei DHCP configurat al router amb adreçament i opcions bàsiques.</p>
+          <div class="meta-row">
+            <span class="pill">DHCP</span><span class="pill">Cisco IOS</span><span class="pill">IPv4</span>
+          </div>
+          <ul class="bullets">
+            <li>Creació de pools i exclusions</li>
+            <li>Opcions: gateway i DNS</li>
+            <li>Verificació amb clients i show commands</li>
+          </ul>
+        </div>
+      </article>
+
+      <!-- 4 -->
+      <article class="project-card" data-tags="sistemes monitoritzacio zabbix agents alertes linux dashboards" data-cat="sistemes">
+        <button class="project-header" type="button" aria-expanded="false">
+          <div class="project-head-left">
+            <span class="project-icon" aria-hidden="true">📈</span>
+            <div class="project-head-text">
+              <div class="project-title-row">
+                <span class="project-title">Monitorització amb Zabbix</span>
+                <span class="badge">Sistemes</span>
+              </div>
+              <span class="project-subtitle">Agents, triggers i dashboards</span>
+            </div>
+          </div>
+          <span class="project-toggle" aria-hidden="true">+</span>
+        </button>
+        <div class="project-info">
+          <p><strong>Resum:</strong> Monitorització de serveis i recursos amb alertes i gràfiques.</p>
+          <div class="meta-row">
+            <span class="pill">Zabbix</span><span class="pill">Alerts</span><span class="pill">Linux</span>
+          </div>
+          <ul class="bullets">
+            <li>Agents i templates</li>
+            <li>Triggers per CPU/RAM/Disc</li>
+            <li>Dashboards d’estat i disponibilitat</li>
+          </ul>
+        </div>
+      </article>
+
+      <!-- 5 -->
+      <article class="project-card" data-tags="sistemes samba active directory windows linux ldap dns shares" data-cat="sistemes">
+        <button class="project-header" type="button" aria-expanded="false">
+          <div class="project-head-left">
+            <span class="project-icon" aria-hidden="true">🏢</span>
+            <div class="project-head-text">
+              <div class="project-title-row">
+                <span class="project-title">Domini Samba (Active Directory)</span>
+                <span class="badge">Sistemes</span>
+              </div>
+              <span class="project-subtitle">Usuaris, grups i recursos compartits</span>
+            </div>
+          </div>
+          <span class="project-toggle" aria-hidden="true">+</span>
+        </button>
+        <div class="project-info">
+          <p><strong>Resum:</strong> Domini tipus AD amb gestió centralitzada d’usuaris i permisos.</p>
+          <div class="meta-row">
+            <span class="pill">Samba AD</span><span class="pill">LDAP</span><span class="pill">DNS</span>
+          </div>
+          <ul class="bullets">
+            <li>Organització d’usuaris i grups</li>
+            <li>Shares i permisos per rols</li>
+            <li>Integració amb clients i validacions</li>
+          </ul>
+        </div>
+      </article>
+
+      <!-- 6 -->
+      <article class="project-card" data-tags="sistemes dns bind9 zones records a cname mx reverse dig" data-cat="sistemes">
+        <button class="project-header" type="button" aria-expanded="false">
+          <div class="project-head-left">
+            <span class="project-icon" aria-hidden="true">🧭</span>
+            <div class="project-head-text">
+              <div class="project-title-row">
+                <span class="project-title">DNS intern amb Bind9</span>
+                <span class="badge">Sistemes</span>
+              </div>
+              <span class="project-subtitle">Zones, registres i resolució local</span>
+            </div>
+          </div>
+          <span class="project-toggle" aria-hidden="true">+</span>
+        </button>
+        <div class="project-info">
+          <p><strong>Resum:</strong> DNS local amb zones directes/inverses i registres bàsics.</p>
+          <div class="meta-row">
+            <span class="pill">Bind9</span><span class="pill">DNS</span><span class="pill">Linux</span>
+          </div>
+          <ul class="bullets">
+            <li>Zones forward i reverse</li>
+            <li>Registres A, CNAME, MX</li>
+            <li>Validació amb dig/nslookup</li>
+          </ul>
+        </div>
+      </article>
+
+      <!-- 7 -->
+      <article class="project-card" data-tags="seguretat firewall ufw iptables ports hardening nmap" data-cat="seguretat">
+        <button class="project-header" type="button" aria-expanded="false">
+          <div class="project-head-left">
+            <span class="project-icon" aria-hidden="true">🛡️</span>
+            <div class="project-head-text">
+              <div class="project-title-row">
+                <span class="project-title">Firewall amb UFW i IPTables</span>
+                <span class="badge badge--security">Seguretat</span>
+              </div>
+              <span class="project-subtitle">Polítiques, ports i validació</span>
+            </div>
+          </div>
+          <span class="project-toggle" aria-hidden="true">+</span>
+        </button>
+        <div class="project-info">
+          <p><strong>Resum:</strong> Regles de firewall i comprovació de superfície exposada.</p>
+          <div class="meta-row">
+            <span class="pill">UFW</span><span class="pill">IPTables</span><span class="pill">Hardening</span>
+          </div>
+          <ul class="bullets">
+            <li>Allow/deny per servei i per rang IP</li>
+            <li>Logs i revisió d’intents</li>
+            <li>Verificació amb nmap</li>
+          </ul>
+        </div>
+      </article>
+
+      <!-- 8 -->
+      <article class="project-card" data-tags="xarxes stp port-security switch cisco bpdu guard portfast" data-cat="xarxes">
+        <button class="project-header" type="button" aria-expanded="false">
+          <div class="project-head-left">
+            <span class="project-icon" aria-hidden="true">🔁</span>
+            <div class="project-head-text">
+              <div class="project-title-row">
+                <span class="project-title">STP i Port-Security</span>
+                <span class="badge">Xarxes</span>
+              </div>
+              <span class="project-subtitle">Root bridge i seguretat de ports</span>
+            </div>
+          </div>
+          <span class="project-toggle" aria-hidden="true">+</span>
+        </button>
+        <div class="project-info">
+          <p><strong>Resum:</strong> Prevenció de bucles i control d’accés per MAC en switchos.</p>
+          <div class="meta-row">
+            <span class="pill">STP</span><span class="pill">Port-Security</span><span class="pill">Cisco</span>
+          </div>
+          <ul class="bullets">
+            <li>Elecció de root bridge</li>
+            <li>Portfast i bones pràctiques</li>
+            <li>Sticky MAC i gestió d’infraccions</li>
+          </ul>
+        </div>
+      </article>
+
+      <!-- 9 -->
+      <article class="project-card" data-tags="sistemes permisos acl linux usuaris grups chmod setgid" data-cat="sistemes">
+        <button class="project-header" type="button" aria-expanded="false">
+          <div class="project-head-left">
+            <span class="project-icon" aria-hidden="true">🔐</span>
+            <div class="project-head-text">
+              <div class="project-title-row">
+                <span class="project-title">Gestió d’Usuaris i Permisos (Linux)</span>
+                <span class="badge">Sistemes</span>
+              </div>
+              <span class="project-subtitle">chmod, setgid, ACLs i bones pràctiques</span>
+            </div>
+          </div>
+          <span class="project-toggle" aria-hidden="true">+</span>
+        </button>
+        <div class="project-info">
+          <p><strong>Resum:</strong> Organització de permisos i accessos per rols i directoris.</p>
+          <div class="meta-row">
+            <span class="pill">chmod</span><span class="pill">ACL</span><span class="pill">Linux</span>
+          </div>
+          <ul class="bullets">
+            <li>Usuaris, grups i propietats</li>
+            <li>ACL per excepcions</li>
+            <li>Estructura segura per departaments</li>
+          </ul>
+        </div>
+      </article>
+
+      <!-- 10 -->
+      <article class="project-card" data-tags="sistemes aws ec2 ssh nginx apache deploy cloud security-groups" data-cat="sistemes">
+        <button class="project-header" type="button" aria-expanded="false">
+          <div class="project-head-left">
+            <span class="project-icon" aria-hidden="true">☁️</span>
+            <div class="project-head-text">
+              <div class="project-title-row">
+                <span class="project-title">Deploy a AWS EC2</span>
+                <span class="badge">Sistemes</span>
+              </div>
+              <span class="project-subtitle">Instàncies, seguretat i serveis</span>
+            </div>
+          </div>
+          <span class="project-toggle" aria-hidden="true">+</span>
+        </button>
+        <div class="project-info">
+          <p><strong>Resum:</strong> Desplegament de serveis al núvol amb configuració bàsica i seguretat.</p>
+          <div class="meta-row">
+            <span class="pill">AWS</span><span class="pill">EC2</span><span class="pill">SSH</span>
+          </div>
+          <ul class="bullets">
+            <li>Security Groups i ports mínims</li>
+            <li>Claus SSH i hardening bàsic</li>
+            <li>Servei web i validacions</li>
+          </ul>
+        </div>
+      </article>
+
+      <!-- 11 -->
+      <article class="project-card" data-tags="seguretat acl cisco extended standard routing filtrat ports serveis" data-cat="seguretat">
+        <button class="project-header" type="button" aria-expanded="false">
+          <div class="project-head-left">
+            <span class="project-icon" aria-hidden="true">📜</span>
+            <div class="project-head-text">
+              <div class="project-title-row">
+                <span class="project-title">ACLs Estàndard i Esteses (Cisco)</span>
+                <span class="badge badge--security">Seguretat</span>
+              </div>
+              <span class="project-subtitle">Filtrat de trànsit per IP, ports i serveis</span>
+            </div>
+          </div>
+          <span class="project-toggle" aria-hidden="true">+</span>
+        </button>
+        <div class="project-info">
+          <p><strong>Resum:</strong> Control d’accés entre xarxes i serveis amb ACLs, aplicació per interfície i sentit.</p>
+          <div class="meta-row">
+            <span class="pill">ACL</span><span class="pill">Cisco IOS</span><span class="pill">Routing</span>
+          </div>
+          <ul class="bullets">
+            <li>ACL estàndard (origen) i estesa (origen/destí/ports)</li>
+            <li>Aplicació inbound/outbound i ordre de regles</li>
+            <li>Validació amb pings i proves de serveis</li>
+          </ul>
+        </div>
+      </article>
+
+      <!-- 12 -->
+      <article class="project-card" data-tags="xarxes nat pat cisco internet overload port-forwarding" data-cat="xarxes">
+        <button class="project-header" type="button" aria-expanded="false">
+          <div class="project-head-left">
+            <span class="project-icon" aria-hidden="true">🔀</span>
+            <div class="project-head-text">
+              <div class="project-title-row">
+                <span class="project-title">NAT/PAT per sortida a Internet</span>
+                <span class="badge">Xarxes</span>
+              </div>
+              <span class="project-subtitle">Overload, NAT dinàmic i redirecció de ports</span>
+            </div>
+          </div>
+          <span class="project-toggle" aria-hidden="true">+</span>
+        </button>
+        <div class="project-info">
+          <p><strong>Resum:</strong> Traducció d’adreces per donar sortida a Internet i publicar serveis interns.</p>
+          <div class="meta-row">
+            <span class="pill">NAT</span><span class="pill">PAT</span><span class="pill">Cisco</span>
+          </div>
+          <ul class="bullets">
+            <li>NAT inside/outside i ACL de traducció</li>
+            <li>PAT overload amb una IP pública</li>
+            <li>Port-forwarding per servei web intern</li>
+          </ul>
+        </div>
+      </article>
+
+      <!-- 13 -->
+      <article class="project-card" data-tags="seguretat nmap nast recon enumeracio ports scripts vuln scan" data-cat="seguretat">
+        <button class="project-header" type="button" aria-expanded="false">
+          <div class="project-head-left">
+            <span class="project-icon" aria-hidden="true">🧪</span>
+            <div class="project-head-text">
+              <div class="project-title-row">
+                <span class="project-title">Enumeració i Reconeixement (Nmap vs Nast)</span>
+                <span class="badge badge--security">Seguretat</span>
+              </div>
+              <span class="project-subtitle">Descobriment d’hosts, ports i serveis</span>
+            </div>
+          </div>
+          <span class="project-toggle" aria-hidden="true">+</span>
+        </button>
+        <div class="project-info">
+          <p><strong>Resum:</strong> Comparativa pràctica entre eines d’enumeració per identificar hosts i serveis.</p>
+          <div class="meta-row">
+            <span class="pill">Nmap</span><span class="pill">Nast</span><span class="pill">Recon</span>
+          </div>
+          <ul class="bullets">
+            <li>Nast: mapping LAN i MACs</li>
+            <li>Nmap: ports, versions i NSE scripts</li>
+            <li>Taula de diferències i casos d’ús</li>
+          </ul>
+        </div>
+      </article>
+
+      <!-- 14 -->
+      <article class="project-card" data-tags="seguretat ssh tunneling port-forwarding local remote dynamic socks pivoting" data-cat="seguretat">
+        <button class="project-header" type="button" aria-expanded="false">
+          <div class="project-head-left">
+            <span class="project-icon" aria-hidden="true">🧩</span>
+            <div class="project-head-text">
+              <div class="project-title-row">
+                <span class="project-title">SSH Tunneling i Pivoting</span>
+                <span class="badge badge--security">Seguretat</span>
+              </div>
+              <span class="project-subtitle">Local/Remote/Dynamic forwarding (SOCKS)</span>
+            </div>
+          </div>
+          <span class="project-toggle" aria-hidden="true">+</span>
+        </button>
+        <div class="project-info">
+          <p><strong>Resum:</strong> Túnels SSH per accedir a serveis interns i fer pivoting controlat.</p>
+          <div class="meta-row">
+            <span class="pill">SSH</span><span class="pill">Tunneling</span><span class="pill">SOCKS</span>
+          </div>
+          <ul class="bullets">
+            <li>Port forwarding local i remot</li>
+            <li>Dynamic forwarding (proxy SOCKS)</li>
+            <li>Validació amb serveis interns i proves</li>
+          </ul>
+        </div>
+      </article>
+
+      <!-- 15 -->
+      <article class="project-card" data-tags="sistemes logs graylog elk stack elasticsearch kibana syslog" data-cat="sistemes">
+        <button class="project-header" type="button" aria-expanded="false">
+          <div class="project-head-left">
+            <span class="project-icon" aria-hidden="true">🧾</span>
+            <div class="project-head-text">
+              <div class="project-title-row">
+                <span class="project-title">Centralització de Logs (Graylog/ELK)</span>
+                <span class="badge">Sistemes</span>
+              </div>
+              <span class="project-subtitle">Recollida, cerca i alertes sobre logs</span>
+            </div>
+          </div>
+          <span class="project-toggle" aria-hidden="true">+</span>
+        </button>
+        <div class="project-info">
+          <p><strong>Resum:</strong> Plataforma de logs per detectar incidències i auditar activitat.</p>
+          <div class="meta-row">
+            <span class="pill">Logs</span><span class="pill">Graylog</span><span class="pill">ELK</span>
+          </div>
+          <ul class="bullets">
+            <li>Inputs (Syslog/Beats) i pipelines</li>
+            <li>Dashboards i cerques</li>
+            <li>Alertes per patrons (errors, auth, etc.)</li>
+          </ul>
+        </div>
+      </article>
+
+      <!-- 16 -->
+      <article class="project-card" data-tags="sistemes docker containers compose nginx mariadb php stack" data-cat="sistemes">
+        <button class="project-header" type="button" aria-expanded="false">
+          <div class="project-head-left">
+            <span class="project-icon" aria-hidden="true">📦</span>
+            <div class="project-head-text">
+              <div class="project-title-row">
+                <span class="project-title">Aplicació amb Docker Compose</span>
+                <span class="badge">Sistemes</span>
+              </div>
+              <span class="project-subtitle">Stack web + base de dades en contenidors</span>
+            </div>
+          </div>
+          <span class="project-toggle" aria-hidden="true">+</span>
+        </button>
+        <div class="project-info">
+          <p><strong>Resum:</strong> Desplegament ràpid d’un entorn web amb serveis separats i xarxes internes.</p>
+          <div class="meta-row">
+            <span class="pill">Docker</span><span class="pill">Compose</span><span class="pill">DevOps</span>
+          </div>
+          <ul class="bullets">
+            <li>Serveis: web, app, db</li>
+            <li>Volums per persistència</li>
+            <li>Ports, xarxes i variables d’entorn</li>
+          </ul>
+        </div>
+      </article>
+
+      <!-- 17 -->
+      <article class="project-card" data-tags="xarxes vlsm subnetting planificacio adreces ip routing" data-cat="xarxes">
+        <button class="project-header" type="button" aria-expanded="false">
+          <div class="project-head-left">
+            <span class="project-icon" aria-hidden="true">🧮</span>
+            <div class="project-head-text">
+              <div class="project-title-row">
+                <span class="project-title">Planificació IP amb VLSM</span>
+                <span class="badge">Xarxes</span>
+              </div>
+              <span class="project-subtitle">Subxarxes eficients per departaments</span>
+            </div>
+          </div>
+          <span class="project-toggle" aria-hidden="true">+</span>
+        </button>
+        <div class="project-info">
+          <p><strong>Resum:</strong> Disseny d’adreçament amb subxarxes adaptades a necessitats reals.</p>
+          <div class="meta-row">
+            <span class="pill">VLSM</span><span class="pill">IPv4</span><span class="pill">Design</span>
+          </div>
+          <ul class="bullets">
+            <li>Càlcul de màscares i rangs</li>
+            <li>Assignació per departament</li>
+            <li>Documentació i validació</li>
+          </ul>
+        </div>
+      </article>
+
+      <!-- 18 -->
+      <article class="project-card" data-tags="xarxes routing static routes floating default gateway troubleshooting" data-cat="xarxes">
+        <button class="project-header" type="button" aria-expanded="false">
+          <div class="project-head-left">
+            <span class="project-icon" aria-hidden="true">🧭</span>
+            <div class="project-head-text">
+              <div class="project-title-row">
+                <span class="project-title">Routing Estàtic i Rutes Flotants</span>
+                <span class="badge">Xarxes</span>
+              </div>
+              <span class="project-subtitle">Rutes per redundància i control</span>
+            </div>
+          </div>
+          <span class="project-toggle" aria-hidden="true">+</span>
+        </button>
+        <div class="project-info">
+          <p><strong>Resum:</strong> Configuració de rutes estàtiques amb preferències per tolerància a fallades.</p>
+          <div class="meta-row">
+            <span class="pill">Static Routing</span><span class="pill">Floating</span><span class="pill">Cisco</span>
+          </div>
+          <ul class="bullets">
+            <li>Rutes específiques i host routes</li>
+            <li>Administrativa distance per rutes flotants</li>
+            <li>Validació amb proves de fallada</li>
+          </ul>
+        </div>
+      </article>
+
+      <!-- 19 -->
+      <article class="project-card" data-tags="seguretat metasploit metasploitable bruteforce telnet dictionary exploit" data-cat="seguretat">
+        <button class="project-header" type="button" aria-expanded="false">
+          <div class="project-head-left">
+            <span class="project-icon" aria-hidden="true">🧨</span>
+            <div class="project-head-text">
+              <div class="project-title-row">
+                <span class="project-title">Laboratori de Seguretat amb Metasploit</span>
+                <span class="badge badge--security">Seguretat</span>
+              </div>
+              <span class="project-subtitle">Enumeració, validació i bones pràctiques</span>
+            </div>
+          </div>
+          <span class="project-toggle" aria-hidden="true">+</span>
+        </button>
+        <div class="project-info">
+          <p><strong>Resum:</strong> Entorn de pràctiques en laboratori per entendre riscos i mesures defensives.</p>
+          <div class="meta-row">
+            <span class="pill">Metasploit</span><span class="pill">Lab</span><span class="pill">Hardening</span>
+          </div>
+          <ul class="bullets">
+            <li>Enumeració de serveis vulnerables</li>
+            <li>Validació controlada en entorn de proves</li>
+            <li>Conclusions i mesures de mitigació</li>
+          </ul>
+        </div>
+      </article>
+
+      <!-- 20 -->
+      <article class="project-card" data-tags="sistemes backups rsync cron snapshots recovery disaster" data-cat="sistemes">
+        <button class="project-header" type="button" aria-expanded="false">
+          <div class="project-head-left">
+            <span class="project-icon" aria-hidden="true">🗄️</span>
+            <div class="project-head-text">
+              <div class="project-title-row">
+                <span class="project-title">Estratègia de Backups (Rsync + Cron)</span>
+                <span class="badge">Sistemes</span>
+              </div>
+              <span class="project-subtitle">Còpies incrementals i recuperació</span>
+            </div>
+          </div>
+          <span class="project-toggle" aria-hidden="true">+</span>
+        </button>
+        <div class="project-info">
+          <p><strong>Resum:</strong> Política de còpies amb programació, rotació i prova de restauració.</p>
+          <div class="meta-row">
+            <span class="pill">Rsync</span><span class="pill">Cron</span><span class="pill">Recovery</span>
+          </div>
+          <ul class="bullets">
+            <li>Backups incrementals i rotació</li>
+            <li>Logs d’execució i validació</li>
+            <li>Procediment de restauració documentat</li>
+          </ul>
+        </div>
+      </article>
+
+    </div>
+
+    <p class="projects-empty" id="projectsEmpty" hidden>
+      No s’han trobat projectes amb aquests filtres. Prova amb una altra paraula o categoria.
+    </p>
+  </section>
+</main>
+
+<footer>
+  <p>© 2025 Amanpreet Singh · ASIX</p>
+</footer>
+
+<script>
+  // Accordion toggle + plus/minus
+  document.querySelectorAll('.project-header').forEach((btn) => {
+    btn.addEventListener('click', () => {
+      const card = btn.closest('.project-card');
+      const isOpen = card.classList.toggle('open');
+      btn.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
+      const toggle = btn.querySelector('.project-toggle');
+      if (toggle) toggle.textContent = isOpen ? '–' : '+';
+    });
+  });
+
+  // Filtering
+  const searchInput = document.getElementById('projectSearch');
+  const chips = Array.from(document.querySelectorAll('.chip'));
+  const cards = Array.from(document.querySelectorAll('.project-card'));
+  const empty = document.getElementById('projectsEmpty');
+
+  let activeFilter = 'all';
+
+  function normalize(s) {
+    return (s || '').toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g, '');
+  }
+
+  function applyFilters() {
+    const q = normalize(searchInput.value.trim());
+
+    let visibleCount = 0;
+    cards.forEach(card => {
+      const cat = card.getAttribute('data-cat') || '';
+      const tags = normalize(card.getAttribute('data-tags') || '');
+      const text = normalize(card.innerText || '');
+
+      const catOk = (activeFilter === 'all') || (cat === activeFilter);
+      const queryOk = !q || tags.includes(q) || text.includes(q);
+
+      const show = catOk && queryOk;
+      card.style.display = show ? '' : 'none';
+      if (show) visibleCount++;
+    });
+
+    empty.hidden = visibleCount !== 0;
+  }
+
+  chips.forEach(chip => {
+    chip.addEventListener('click', () => {
+      chips.forEach(c => c.classList.remove('active'));
+      chip.classList.add('active');
+      activeFilter = chip.dataset.filter;
+      applyFilters();
+    });
+  });
+
+  searchInput.addEventListener('input', applyFilters);
+  applyFilters();
+</script>
+<script src="main.js"></script>
+</body>
+</html>

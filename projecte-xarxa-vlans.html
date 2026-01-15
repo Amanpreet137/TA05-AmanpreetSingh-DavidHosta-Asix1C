@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="ca">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Xarxa amb VLANs, STP i router-on-a-stick</title>
+  <link rel="stylesheet" href="style.css">
+
+  <!-- Estil mínim extra per estructurar bé el contingut -->
+  <style>
+    .project-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 26px;
+      margin-top: 30px;
+    }
+    .project-grid ul {
+      margin-left: 18px;
+      margin-top: 10px;
+      color: var(--text-muted);
+    }
+    .project-grid li { margin: 6px 0; }
+
+    .project-actions { margin-top: 18px; display: flex; gap: 12px; flex-wrap: wrap; }
+    .btn-secondary {
+      display: inline-block;
+      padding: 12px 18px;
+      border-radius: 999px;
+      border: 1px solid rgba(148, 163, 184, 0.35);
+      color: var(--text-main);
+      text-decoration: none;
+      background: rgba(17, 24, 39, 0.35);
+    }
+    .btn-secondary:hover { filter: brightness(1.08); }
+
+    @media (max-width: 900px) {
+      .project-grid { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+
+<body>
+    <div class="scroll-progress-wrap" aria-hidden="true">
+  <div id="scrollProgress" class="scroll-progress-bar"></div>
+</div>
+
+<header>
+  <div class="header-top">
+    <h1>El meu portfoli</h1>
+  </div>
+
+  <nav>
+    <ul>
+      <li><a href="index.html">Inici</a></li>
+      <li><a href="projectes.html">Projectes</a></li>
+      <li><a href="contacte.html">Contacte</a></li>
+      <li class="nav-tools">
+  <button id="themeToggle" class="theme-toggle" type="button" aria-pressed="false" title="Canviar tema">
+    ☀️
+  </button>
+</li>
+
+    </ul>
+  </nav>
+</header>
+
+<main class="main-content">
+  <div class="hero">
+    <div class="hero-text">
+      <h2>Xarxa amb <span>VLANs</span>, STP i router-on-a-stick</h2>
+      <p>
+        Disseny i configuració d’una xarxa d’oficina segmentada per departaments, evitant bucles amb STP
+        i permetent comunicació inter-VLAN a través d’un router-on-a-stick.
+      </p>
+
+      <div class="project-actions">
+        <a href="index.html" class="btn-primary">Tornar a l’inici</a>
+        <a href="projectes.html" class="btn-secondary">Veure tots els projectes</a>
+      </div>
+    </div>
+
+    <div class="hero-card">
+      <h3>Fitxa tècnica</h3>
+      <p><strong>Rol:</strong> Disseny i configuració</p>
+      <p><strong>Entorn:</strong> Cisco Packet Tracer / laboratori</p>
+      <p><strong>Àrees:</strong> VLAN, trunking, STP, routing</p>
+      <p><strong>Equipament:</strong> Switchos L2 + Router (ROAS)</p>
+    </div>
+  </div>
+
+  <div class="destacats">
+    <h2>Detalls del projecte</h2>
+
+    <div class="project-grid">
+      <div class="hero-card">
+        <h3>Objectius</h3>
+        <ul>
+          <li>Separar trànsit per departaments amb VLANs</li>
+          <li>Configurar enllaços troncals 802.1Q</li>
+          <li>Evitar bucles amb STP i definir root bridge</li>
+          <li>Permetre interconnexió entre VLANs (router-on-a-stick)</li>
+        </ul>
+      </div>
+
+      <div class="hero-card">
+        <h3>Topologia (inventada però realista)</h3>
+        <ul>
+          <li>VLAN 10: Administració</li>
+          <li>VLAN 20: IT</li>
+          <li>VLAN 30: Direcció</li>
+          <li>VLAN 99: Gestió (nativa / management)</li>
+          <li>Switch Core + Switch Accés + Router</li>
+        </ul>
+      </div>
+
+      <div class="hero-card">
+        <h3>Implementació (resum)</h3>
+        <ul>
+          <li>Creació de VLANs i assignació de ports d’accés</li>
+          <li>Configuració de trunks entre switchos (allowed VLANs)</li>
+          <li>STP: prioritat per elegir root bridge i verificació</li>
+          <li>Subinterfícies al router: encapsulation dot1q + IP gateway</li>
+          <li>Proves: ping inter-VLAN i comprovacions de taules</li>
+        </ul>
+      </div>
+
+      <div class="hero-card">
+        <h3>Resultats</h3>
+        <p>
+          La segmentació redueix broadcast entre departaments i millora la seguretat.
+          STP garanteix estabilitat davant bucles i el router-on-a-stick proporciona
+          connectivitat inter-VLAN amb un únic enllaç tronc.
+        </p>
+      </div>
+    </div>
+  </div>
+</main>
+
+<footer>
+  <p>© 2025 Amanpreet Singh · ASIX</p>
+</footer>
+<script src="main.js"></script> 
+</body>
+</html>

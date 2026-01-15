@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="ca">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Servidor Linux amb Apache, SSL i còpies de seguretat</title>
+  <link rel="stylesheet" href="style.css">
+
+  <!-- Estil mínim extra per estructurar bé el contingut -->
+  <style>
+    .project-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 26px;
+      margin-top: 30px;
+    }
+    .project-grid ul {
+      margin-left: 18px;
+      margin-top: 10px;
+      color: var(--text-muted);
+    }
+    .project-grid li { margin: 6px 0; }
+
+    .project-actions { margin-top: 18px; display: flex; gap: 12px; flex-wrap: wrap; }
+    .btn-secondary {
+      display: inline-block;
+      padding: 12px 18px;
+      border-radius: 999px;
+      border: 1px solid rgba(148, 163, 184, 0.35);
+      color: var(--text-main);
+      text-decoration: none;
+      background: rgba(17, 24, 39, 0.35);
+    }
+    .btn-secondary:hover { filter: brightness(1.08); }
+
+    @media (max-width: 900px) {
+      .project-grid { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+
+<body>
+    <div class="scroll-progress-wrap" aria-hidden="true">
+  <div id="scrollProgress" class="scroll-progress-bar"></div>
+</div>
+
+<header>
+  <div class="header-top">
+    <h1>El meu portfoli</h1>
+  </div>
+
+  <nav>
+    <ul>
+      <li><a href="index.html">Inici</a></li>
+      <li><a href="projectes.html">Projectes</a></li>
+      <li><a href="contacte.html">Contacte</a></li>
+      <li class="nav-tools">
+  <button id="themeToggle" class="theme-toggle" type="button" aria-pressed="false" title="Canviar tema">
+    ☀️
+  </button>
+</li>
+
+    </ul>
+  </nav>
+</header>
+
+<main class="main-content">
+  <div class="hero">
+    <div class="hero-text">
+      <h2>Servidor Linux amb <span>Apache</span>, SSL i còpies de seguretat</h2>
+      <p>
+        Projecte d’administració de sistemes orientat a desplegar un servidor web segur,
+        protegint l’accés a recursos i garantint recuperació de dades mitjançant backups automatitzats.
+      </p>
+
+      <div class="project-actions">
+        <a href="index.html" class="btn-primary">Tornar a l’inici</a>
+        <a href="projectes.html" class="btn-secondary">Veure tots els projectes</a>
+      </div>
+    </div>
+
+    <div class="hero-card">
+      <h3>Fitxa tècnica</h3>
+      <p><strong>Rol:</strong> Administració i desplegament</p>
+      <p><strong>Entorn:</strong> Ubuntu Server (VM / laboratori)</p>
+      <p><strong>Àrees:</strong> Web, seguretat, permisos, backups</p>
+      <p><strong>Eines:</strong> Apache2, OpenSSL, .htaccess, Duplicati, SSH</p>
+    </div>
+  </div>
+
+  <div class="destacats">
+    <h2>Detalls del projecte</h2>
+
+    <div class="project-grid">
+      <div class="hero-card">
+        <h3>Objectius</h3>
+        <ul>
+          <li>Publicar un servei web estable amb Apache i Virtual Hosts</li>
+          <li>Xifrar comunicacions amb HTTPS (SSL/TLS)</li>
+          <li>Restringir accés a directoris amb autenticació bàsica</li>
+          <li>Automatitzar còpies de seguretat amb versionat i restauració</li>
+        </ul>
+      </div>
+
+      <div class="hero-card">
+        <h3>Implementació (resum)</h3>
+        <ul>
+          <li>Configuració de Virtual Hosts i estructura de directoris</li>
+          <li>Activació de mòduls necessaris (ssl, headers, etc.)</li>
+          <li>Certificat SSL (autofirmat) i redirecció HTTP → HTTPS</li>
+          <li>.htaccess + fitxer d’usuaris i proves d’accés</li>
+          <li>Duplicati amb planificació i verificació de restauració</li>
+        </ul>
+      </div>
+
+      <div class="hero-card">
+        <h3>Resultats</h3>
+        <p>
+          El servidor queda operatiu amb navegació xifrada, control d’accés i un sistema de backups
+          que permet recuperar informació després d’una incidència. La solució és escalable per afegir
+          més llocs web i polítiques de seguretat.
+        </p>
+      </div>
+
+      <div class="hero-card">
+        <h3>Millores futures</h3>
+        <ul>
+          <li>Certificat Let’s Encrypt i renovació automàtica</li>
+          <li>Hardening d’Apache (headers, limitació mètodes, rate limit)</li>
+          <li>Monitorització bàsica (logs + alertes)</li>
+          <li>Backups offsite (núvol o servidor remot)</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</main>
+
+<footer>
+  <p>© 2025 Amanpreet Singh · ASIX</p>
+</footer>
+<script src="main.js"></script>
+</body>
+</html>
